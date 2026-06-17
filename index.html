@@ -5,405 +5,365 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Toffin Indonesia — Mitra HORECA Terpercaya sejak 2007</title>
   <meta name="description" content="Distributor mesin kopi, bahan baku, dan solusi lengkap bisnis kafe & restoran. Melayani 15.000+ klien di 19 kota Indonesia.">
+  <meta property="og:title" content="Toffin Indonesia — Mitra HORECA Terpercaya">
+  <meta property="og:description" content="Distributor mesin kopi & solusi HORECA terlengkap di Indonesia.">
+  <meta property="og:image" content="/public/images/logos/toffin-white.png">
+  <meta name="theme-color" content="#09090b">
+  <link rel="icon" type="image/png" href="/public/images/logos/toffin-white.png">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="container nav-container">
-      <a href="#" class="logo"><img src="https://www.toffin.id/assets/img/root/logo-white.png" alt="Toffin Indonesia" class="logo-img"></a>
-      <ul class="nav-links">
-        <li><a href="#ecosystem">Ekosistem</a></li>
-        <li><a href="#products">Produk</a></li>
-        <li><a href="#gallery">Galeri</a></li>
-        <li><a href="#brands">Brand</a></li>
-        <li><a href="#testimonials">Testimoni</a></li>
-        <li><a href="#contact">Kontak</a></li>
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <img src="/public/images/logos/toffin-white.png" alt="Toffin" class="logo-img">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" data-nav>Tentang</a></li>
+        <li><a href="#products" data-nav>Produk</a></li>
+        <li><a href="#ingredients" data-nav>Bahan Baku</a></li>
+        <li><a href="#contact" data-nav>Kontak</a></li>
       </ul>
       <div class="nav-actions">
         <a href="https://shop.toffin.id" class="btn btn-ghost" target="_blank">Shop</a>
-        <a href="https://wa.me/6281320666967" class="btn btn-primary" target="_blank">Konsultasi Gratis</a>
+        <a href="https://wa.me/6281320666967" class="btn btn-primary" target="_blank">Konsultasi</a>
       </div>
-      <button class="mobile-menu-btn" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <section class="hero">
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <a href="#about" data-mobile-nav>Tentang</a>
+      <a href="#products" data-mobile-nav>Produk</a>
+      <a href="#ingredients" data-mobile-nav>Bahan Baku</a>
+      <a href="#contact" data-mobile-nav>Kontak</a>
+      <a href="https://shop.toffin.id" target="_blank">Shop</a>
+      <a href="https://wa.me/6281320666967" class="btn btn-primary btn-lg" target="_blank">Konsultasi Gratis</a>
+    </div>
+  </div>
+
+  <section class="hero" id="hero">
     <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1920&q=80&auto=format&fit=crop" alt="Coffee shop" loading="eager">
+      <img src="/public/images/gallery/hero-bg.jpg" alt="" class="hero-bg-img" id="heroBg">
       <div class="hero-overlay"></div>
     </div>
-    <div class="container hero-content">
-      <div class="hero-badge">Mitra HORECA Terpercaya sejak 2007</div>
-      <h1 class="hero-title">Satu Mitra untuk Semua<br>Kebutuhan <span class="text-gradient">Kafe & Restoran</span> Anda</h1>
-      <p class="hero-subtitle">Dari mesin espresso kelas dunia hingga bahan baku berkualitas tinggi — Toffin menyediakan semua yang dibutuhkan bisnis F&B Anda untuk beroperasi di level terbaik, setiap hari.</p>
-      <div class="hero-cta">
-        <a href="https://wa.me/6281320666967" class="btn btn-primary btn-lg" target="_blank">Mulai Konsultasi</a>
-        <a href="https://shop.toffin.id" class="btn btn-outline btn-lg" target="_blank">Lihat Produk</a>
+    <div class="hero-content">
+      <div class="hero-tag" data-reveal>
+        <span class="tag-line"></span>
+        <span>Mitra HORECA Terpercaya sejak 2007</span>
       </div>
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-number">15.000+</span>
+      <h1 class="hero-title">
+        <span class="line" data-reveal><span>Satu Mitra untuk</span></span>
+        <span class="line" data-reveal><span>Semua Kebutuhan</span></span>
+        <span class="line line-accent" data-reveal><span><em>Kafe & Restoran</em> Anda</span></span>
+      </h1>
+      <p class="hero-sub" data-reveal>
+        Dari mesin espresso kelas dunia hingga bahan baku berkualitas tinggi — Toffin menyediakan semua yang dibutuhkan bisnis F&B Anda untuk beroperasi di level terbaik, setiap hari.
+      </p>
+      <div class="hero-cta" data-reveal>
+        <a href="https://wa.me/6281320666967" class="btn btn-primary btn-xl" target="_blank">
+          <span>Mulai Konsultasi</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="https://shop.toffin.id" class="btn btn-outline btn-xl" target="_blank">Lihat Produk</a>
+      </div>
+      <div class="hero-stats" data-reveal>
+        <div class="stat">
+          <span class="stat-num" data-count="15000">0</span><span class="stat-plus">+</span>
           <span class="stat-label">Klien Aktif</span>
         </div>
-        <div class="stat-item">
-          <span class="stat-number">19</span>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-count="19">0</span>
           <span class="stat-label">Kota</span>
         </div>
-        <div class="stat-item">
-          <span class="stat-number">17+</span>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-count="17">0</span><span class="stat-plus">+</span>
           <span class="stat-label">Tahun</span>
         </div>
-        <div class="stat-item">
-          <span class="stat-number">Top-5</span>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num stat-text">Top-5</span>
           <span class="stat-label">Distributor Global</span>
         </div>
       </div>
     </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
   </section>
 
-  <section class="featured-product">
+  <section class="marquee-section">
+    <div class="marquee">
+      <div class="marquee-content">
+        <span>Victoria Arduino</span><span class="marquee-dot">●</span>
+        <span>Nuova Simonelli</span><span class="marquee-dot">●</span>
+        <span>Rocket Espresso</span><span class="marquee-dot">●</span>
+        <span>SMEG</span><span class="marquee-dot">●</span>
+        <span>Hario</span><span class="marquee-dot">●</span>
+        <span>Eureka</span><span class="marquee-dot">●</span>
+        <span>Eversys</span><span class="marquee-dot">●</span>
+        <span>DaVinci Gourmet</span><span class="marquee-dot">●</span>
+        <span>Fabbri</span><span class="marquee-dot">●</span>
+        <span>Victoria Arduino</span><span class="marquee-dot">●</span>
+        <span>Nuova Simonelli</span><span class="marquee-dot">●</span>
+        <span>Rocket Espresso</span><span class="marquee-dot">●</span>
+        <span>SMEG</span><span class="marquee-dot">●</span>
+        <span>Hario</span><span class="marquee-dot">●</span>
+        <span>Eureka</span><span class="marquee-dot">●</span>
+        <span>Eversys</span><span class="marquee-dot">●</span>
+        <span>DaVinci Gourmet</span><span class="marquee-dot">●</span>
+        <span>Fabbri</span><span class="marquee-dot">●</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section" id="about">
     <div class="container">
-      <div class="featured-grid">
-        <div class="featured-image">
-          <img src="https://shop.toffin.id/public/image/product.template/victoria-arduino-eagle-one-3-group-matte-black-jex.jpg" alt="Victoria Arduino Eagle One 3 Group" loading="lazy">
+      <div class="about-grid">
+        <div class="about-left">
+          <span class="section-label" data-reveal>Tentang Toffin</span>
+          <h2 class="section-title" data-reveal>
+            Lebih dari<br><em>Sekadar Distributor</em>
+          </h2>
         </div>
-        <div class="featured-info">
-          <span class="product-tag">Produk Unggulan</span>
-          <h2>Victoria Arduino Eagle One</h2>
-          <p class="featured-desc">Mesin espresso komersial generasi terbaru dengan teknologi T3 dan green-tech. Dirancang untuk kafe dengan volume tinggi yang mengutamakan konsistensi rasa dan efisiensi energi.</p>
-          <div class="featured-specs">
-            <div class="spec">
-              <span class="spec-label">Grup</span>
-              <span class="spec-value">3 Group</span>
+        <div class="about-right" data-reveal>
+          <p class="about-lead">Sejak 2007, Toffin hadir bukan hanya sebagai penyedia mesin kopi — melainkan sebagai mitra bisnis jangka panjang bagi ribuan kafe, restoran, dan hotel di Indonesia.</p>
+          <p>Pengakuan sebagai distributor top-5 global untuk beberapa brand premium dunia bukan sekadar pencapaian bisnis — ini adalah bukti kepercayaan yang dibangun satu kemitraan dalam satu waktu.</p>
+          <div class="about-stats">
+            <div class="about-stat">
+              <strong>800+</strong><span>Karyawan</span>
             </div>
-            <div class="spec">
-              <span class="spec-label">Boiler</span>
-              <span class="spec-value">Dual</span>
+            <div class="about-stat">
+              <strong>3</strong><span>Negara</span>
             </div>
-            <div class="spec">
-              <span class="spec-label">Teknologi</span>
-              <span class="spec-value">T3 Smart</span>
+            <div class="about-stat">
+              <strong>1.000+</strong><span>SKU</span>
             </div>
-            <div class="spec">
-              <span class="spec-label">Harga</span>
-              <span class="spec-value">Rp 230.000.000</span>
-            </div>
-          </div>
-          <div class="featured-actions">
-            <a href="https://shop.toffin.id/product/victoria-arduino-eagle-one-3-group-matte-black/40288" class="btn btn-primary" target="_blank">Lihat di Shop</a>
-            <a href="https://wa.me/6281320666967" class="btn btn-outline" target="_blank">Konsultasi</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="ecosystem" class="ecosystem-section">
+  <section class="ecosystem-section">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Ekosistem Kami</span>
-        <h2 class="section-title">Solusi Lengkap untuk Bisnis Anda</h2>
-        <p class="section-subtitle">Satu hubungan, semua solusi — dari pemilihan mesin hingga operasional harian kafe Anda.</p>
+      <div class="section-header" data-reveal>
+        <span class="section-label">Ekosistem</span>
+        <h2 class="section-title-lg">Solusi Lengkap untuk<br>Bisnis <em>Anda</em></h2>
       </div>
-      <div class="ecosystem-grid">
-        <div class="eco-card">
-          <div class="eco-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-          </div>
+      <div class="eco-grid">
+        <a href="https://shop.toffin.id/category/coffee-machine/383" class="eco-card" target="_blank" data-reveal>
+          <div class="eco-num">01</div>
           <h3>Mesin Kopi & Peralatan</h3>
-          <p>Koleksi mesin espresso dan grinder dari brand-brand terkemuka dunia. Garansi resmi, suku cadang original, dan instalasi oleh teknisi bersertifikat.</p>
-          <a href="https://shop.toffin.id/category/coffee-machine/383" class="eco-link" target="_blank">Lihat Produk →</a>
-        </div>
-        <div class="eco-card">
-          <div class="eco-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-          </div>
+          <p>Koleksi mesin espresso dan grinder dari brand-brand terkemuka dunia. Garansi resmi dan instalasi oleh teknisi bersertifikat.</p>
+          <span class="eco-arrow">→</span>
+        </a>
+        <a href="https://shop.toffin.id/category/ingredients/384" class="eco-card" target="_blank" data-reveal>
+          <div class="eco-num">02</div>
           <h3>Bahan Baku</h3>
-          <p>340+ SKU bahan baku pilihan — sirup, frappe, biji kopi specialty, pure extract, hingga bahan gelato. Pasokan rutin agar rasa menu Anda selalu konsisten.</p>
-          <a href="https://shop.toffin.id/category/ingredients/384" class="eco-link" target="_blank">Lihat Katalog →</a>
-        </div>
-        <div class="eco-card">
-          <div class="eco-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </div>
+          <p>340+ SKU bahan baku pilihan — sirup, frappe, biji kopi specialty, pure extract, hingga bahan gelato.</p>
+          <span class="eco-arrow">→</span>
+        </a>
+        <a href="https://toffin.id/toffin-app" class="eco-card" target="_blank" data-reveal>
+          <div class="eco-num">03</div>
           <h3>Toffin App</h3>
-          <p>Platform digital B2B pemenang Product of the Year 2024. Pesan bahan baku, pantau mesin, kelola multi-outlet, dan dapatkan insight berbasis AI.</p>
-          <a href="https://toffin.id/toffin-app" class="eco-link" target="_blank">Pelajari App →</a>
-        </div>
-        <div class="eco-card">
-          <div class="eco-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-          </div>
+          <p>Platform digital B2B pemenang Product of the Year 2024. Pesan bahan baku, pantau mesin, kelola multi-outlet.</p>
+          <span class="eco-arrow">→</span>
+        </a>
+        <a href="https://toffin.id/support" class="eco-card" target="_blank" data-reveal>
+          <div class="eco-num">04</div>
           <h3>Layanan Purna Jual</h3>
-          <p>100+ teknisi bersertifikat di 19 kota, siap merespons dalam 24 jam. Servis preventif, kalibrasi, hingga program Maintenance Agreement.</p>
-          <a href="https://toffin.id/support" class="eco-link" target="_blank">Lihat Support →</a>
-        </div>
-        <div class="eco-card">
-          <div class="eco-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
+          <p>100+ teknisi bersertifikat di 19 kota, siap merespons dalam 24 jam. Servis preventif hingga Maintenance Agreement.</p>
+          <span class="eco-arrow">→</span>
+        </a>
+        <a href="https://wa.me/6281320666967" class="eco-card" target="_blank" data-reveal>
+          <div class="eco-num">05</div>
           <h3>Pelatihan & Konsultasi</h3>
-          <p>Dari barista training dasar hingga program pengembangan minuman — Toffin Flavour Engineer mendukung pengembangan SDM kafe Anda.</p>
-          <a href="https://wa.me/6281320666967" class="eco-link" target="_blank">Mulai Konsultasi →</a>
-        </div>
-        <div class="eco-card">
-          <div class="eco-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
+          <p>Barista training dasar hingga program pengembangan minuman — Toffin Flavour Engineer mendukung SDM kafe Anda.</p>
+          <span class="eco-arrow">→</span>
+        </a>
+        <a href="https://toffin.id/support" class="eco-card" target="_blank" data-reveal>
+          <div class="eco-num">06</div>
           <h3>Garansi & Ketenangan Pikiran</h3>
-          <p>Garansi resmi dari principal, stok suku cadang original di Indonesia, dan program extended warranty — investasi Anda terlindungi sepenuhnya.</p>
-          <a href="https://toffin.id/support" class="eco-link" target="_blank">Detail Garansi →</a>
-        </div>
+          <p>Garansi resmi dari principal, stok suku cadang original, dan program extended warranty — investasi Anda terlindungi.</p>
+          <span class="eco-arrow">→</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <section id="products" class="products-section">
+  <section class="products-section" id="products">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Produk Terbaru</span>
-        <h2 class="section-title">Mesin Kopi & Grinder Premium</h2>
-        <p class="section-subtitle">Pilihan terbaik dari brand dunia untuk bisnis F&B Anda.</p>
+      <div class="section-header" data-reveal>
+        <span class="section-label">Produk Unggulan</span>
+        <h2 class="section-title-lg">Mesin Kopi <em>Premium</em></h2>
       </div>
-      <div class="products-showcase">
-        <div class="product-card-lg">
-          <div class="product-img-wrap">
-            <img src="https://shop.toffin.id/public/image/product.template/victoria-arduino-maverick-core-t3-3-group-white-wor.jpg" alt="Victoria Arduino Maverick Core T3" loading="lazy">
-            <span class="product-badge">New 2025</span>
+      <div class="products-grid">
+        <a href="https://shop.toffin.id/product/victoria-arduino-eagle-one-3-group-matte-black/40288" class="product-card" target="_blank" data-reveal>
+          <div class="product-img">
+            <img src="/public/images/products/eagle-one-3g.jpg" alt="Victoria Arduino Eagle One" loading="lazy">
           </div>
-          <div class="product-details">
+          <div class="product-meta">
             <span class="product-brand">Victoria Arduino</span>
-            <h3>Maverick Core T3 3 Group</h3>
-            <p class="product-price">Rp 295.000.000</p>
-            <a href="https://shop.toffin.id/product/victoria-arduino-maverick-core-t3-3-group-white/52513" class="btn btn-outline btn-sm" target="_blank">Lihat Detail</a>
+            <h3>Eagle One 3 Group</h3>
+            <div class="product-bottom">
+              <span class="product-price">Rp 230.000.000</span>
+              <span class="product-cta">Lihat →</span>
+            </div>
           </div>
-        </div>
-        <div class="product-card-lg">
-          <div class="product-img-wrap">
-            <img src="https://shop.toffin.id/public/image/product.template/victoria-arduino-eagle-tempo-3g-black-szc.jpg" alt="Victoria Arduino Eagle Tempo 3G" loading="lazy">
-            <span class="product-badge bestseller">Bestseller</span>
+        </a>
+        <a href="https://shop.toffin.id/product/victoria-arduino-maverick-core-t3-3-group-white/52513" class="product-card" target="_blank" data-reveal>
+          <div class="product-img">
+            <img src="/public/images/products/maverick-3g.jpg" alt="Victoria Arduino Maverick" loading="lazy">
+            <span class="product-badge">New</span>
           </div>
-          <div class="product-details">
+          <div class="product-meta">
             <span class="product-brand">Victoria Arduino</span>
-            <h3>Eagle Tempo 3G (Black)</h3>
-            <p class="product-price">Rp 218.000.000</p>
-            <a href="https://shop.toffin.id/product/victoria-arduino-eagle-tempo-3g-black/43074" class="btn btn-outline btn-sm" target="_blank">Lihat Detail</a>
+            <h3>Maverick Core T3 3G</h3>
+            <div class="product-bottom">
+              <span class="product-price">Rp 295.000.000</span>
+              <span class="product-cta">Lihat →</span>
+            </div>
           </div>
-        </div>
-        <div class="product-card-lg">
-          <div class="product-img-wrap">
-            <img src="https://shop.toffin.id/public/image/product.template/nuova-simonelli-appia-life-v-1-group-titan-grey-qbr.jpg" alt="Nuova Simonelli Appia Life V" loading="lazy">
-            <span class="product-badge">Terjangkau</span>
+        </a>
+        <a href="https://shop.toffin.id/product/victoria-arduino-eagle-tempo-3g-black/43074" class="product-card" target="_blank" data-reveal>
+          <div class="product-img">
+            <img src="/public/images/products/eagle-tempo-3g.jpg" alt="Victoria Arduino Eagle Tempo" loading="lazy">
           </div>
-          <div class="product-details">
+          <div class="product-meta">
+            <span class="product-brand">Victoria Arduino</span>
+            <h3>Eagle Tempo 3G</h3>
+            <div class="product-bottom">
+              <span class="product-price">Rp 218.000.000</span>
+              <span class="product-cta">Lihat →</span>
+            </div>
+          </div>
+        </a>
+        <a href="https://shop.toffin.id/product/nuova-simonelli-appia-life-v-1-group-titan-grey/44251" class="product-card" target="_blank" data-reveal>
+          <div class="product-img">
+            <img src="/public/images/products/appia-life-1g.jpg" alt="Nuova Simonelli Appia Life" loading="lazy">
+          </div>
+          <div class="product-meta">
             <span class="product-brand">Nuova Simonelli</span>
             <h3>Appia Life V 1 Group</h3>
-            <p class="product-price">Rp 70.000.000</p>
-            <a href="https://shop.toffin.id/product/nuova-simonelli-appia-life-v-1-group-titan-grey/44251" class="btn btn-outline btn-sm" target="_blank">Lihat Detail</a>
+            <div class="product-bottom">
+              <span class="product-price">Rp 70.000.000</span>
+              <span class="product-cta">Lihat →</span>
+            </div>
           </div>
-        </div>
-        <div class="product-card-lg">
-          <div class="product-img-wrap">
-            <img src="https://shop.toffin.id/public/image/product.template/victoria-arduino-eagle-one-prima-steel-gdr.png" alt="Victoria Arduino Eagle One Prima" loading="lazy">
+        </a>
+        <a href="https://shop.toffin.id/product/victoria-arduino-eagle-one-prima-steel/40277" class="product-card" target="_blank" data-reveal>
+          <div class="product-img">
+            <img src="/public/images/products/eagle-one-prima.png" alt="Victoria Arduino Eagle One Prima" loading="lazy">
           </div>
-          <div class="product-details">
+          <div class="product-meta">
             <span class="product-brand">Victoria Arduino</span>
             <h3>Eagle One Prima Steel</h3>
-            <p class="product-price">Rp 94.600.000</p>
-            <a href="https://shop.toffin.id/product/victoria-arduino-eagle-one-prima-steel/40277" class="btn btn-outline btn-sm" target="_blank">Lihat Detail</a>
+            <div class="product-bottom">
+              <span class="product-price">Rp 94.600.000</span>
+              <span class="product-cta">Lihat →</span>
+            </div>
           </div>
-        </div>
-        <div class="product-card-lg">
-          <div class="product-img-wrap">
-            <img src="https://shop.toffin.id/public/image/product.template/vbm-domobar-super-digital-fbc.jpg" alt="VBM Domobar Super Digital" loading="lazy">
+        </a>
+        <a href="https://shop.toffin.id/product/victoria-arduino-va388-black-eagle-t3-2-group/40316" class="product-card" target="_blank" data-reveal>
+          <div class="product-img">
+            <img src="/public/images/products/black-eagle-2g.jpg" alt="Victoria Arduino Black Eagle" loading="lazy">
           </div>
-          <div class="product-details">
-            <span class="product-brand">VBM</span>
-            <h3>Domobar Super Digital</h3>
-            <p class="product-price">Rp 50.800.000</p>
-            <a href="https://shop.toffin.id/product/vbm-domobar-super-digital/40220" class="btn btn-outline btn-sm" target="_blank">Lihat Detail</a>
-          </div>
-        </div>
-        <div class="product-card-lg">
-          <div class="product-img-wrap">
-            <img src="https://shop.toffin.id/public/image/product.template/victoria-arduino-va388-black-eagle-t3-2-group-zga.jpg" alt="Victoria Arduino Black Eagle" loading="lazy">
-            <span class="product-badge premium">Premium</span>
-          </div>
-          <div class="product-details">
+          <div class="product-meta">
             <span class="product-brand">Victoria Arduino</span>
-            <h3>VA388 Black Eagle T3 2G</h3>
-            <p class="product-price">Rp 290.000.000</p>
-            <a href="https://shop.toffin.id/product/victoria-arduino-va388-black-eagle-t3-2-group/40316" class="btn btn-outline btn-sm" target="_blank">Lihat Detail</a>
+            <h3>VA388 Black Eagle T3</h3>
+            <div class="product-bottom">
+              <span class="product-price">Rp 290.000.000</span>
+              <span class="product-cta">Lihat →</span>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
-      <div class="products-cta">
-        <a href="https://shop.toffin.id/category/coffee-machine/383" class="btn btn-primary btn-lg" target="_blank">Lihat Semua Mesin →</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="syrup-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Bahan Baku</span>
-        <h2 class="section-title">Syrup & Bahan Minuman Premium</h2>
-        <p class="section-subtitle">340+ SKU bahan baku dari brand terkemuka untuk berbagai menu kafe Anda.</p>
-      </div>
-      <div class="syrup-grid">
-        <div class="syrup-card">
-          <div class="syrup-img">
-            <img src="https://shop.toffin.id/public/image/product.template/davinci-syrup-peach-garden-750ml-ayl.png" alt="DaVinci Syrup Peach Garden" loading="lazy">
-          </div>
-          <div class="syrup-info">
-            <span class="syrup-brand">DaVinci Gourmet</span>
-            <h4>Syrup Peach Garden 750ML</h4>
-            <p class="syrup-price">Rp 119.000</p>
-          </div>
-        </div>
-        <div class="syrup-card">
-          <div class="syrup-img">
-            <img src="https://shop.toffin.id/public/image/product.template/davinci-syrup-majestic-mango-750ml-efn.png" alt="DaVinci Syrup Majestic Mango" loading="lazy">
-          </div>
-          <div class="syrup-info">
-            <span class="syrup-brand">DaVinci Gourmet</span>
-            <h4>Syrup Majestic Mango 750ML</h4>
-            <p class="syrup-price">Rp 119.000</p>
-          </div>
-        </div>
-        <div class="syrup-card">
-          <div class="syrup-img">
-            <img src="https://shop.toffin.id/public/image/product.template/fabbri-mixybar-kiwi-olt.jpg" alt="Fabbri Mixybar Kiwi" loading="lazy">
-          </div>
-          <div class="syrup-info">
-            <span class="syrup-brand">Fabbri</span>
-            <h4>Mixybar Kiwi</h4>
-            <p class="syrup-price">Rp 295.000</p>
-          </div>
-        </div>
-        <div class="syrup-card">
-          <div class="syrup-img">
-            <img src="https://shop.toffin.id/public/image/product.template/tfn-syrup-vanilla-iaq.jpg" alt="TFN Syrup Vanilla" loading="lazy">
-          </div>
-          <div class="syrup-info">
-            <span class="syrup-brand">TFN</span>
-            <h4>Syrup Vanilla</h4>
-            <p class="syrup-price">Rp 115.000</p>
-          </div>
-        </div>
-        <div class="syrup-card">
-          <div class="syrup-img">
-            <img src="https://shop.toffin.id/public/image/product.template/fabbri-mixybar-cranberry-jnq.jpg" alt="Fabbri Mixybar Cranberry" loading="lazy">
-          </div>
-          <div class="syrup-info">
-            <span class="syrup-brand">Fabbri</span>
-            <h4>Mixybar Cranberry</h4>
-            <p class="syrup-price">Rp 335.000</p>
-          </div>
-        </div>
-        <div class="syrup-card">
-          <div class="syrup-img">
-            <img src="https://shop.toffin.id/public/image/product.template/fabbri-mixybar-lemon-nxk.jpg" alt="Fabbri Mixybar Lemon" loading="lazy">
-          </div>
-          <div class="syrup-info">
-            <span class="syrup-brand">Fabbri</span>
-            <h4>Mixybar Lemon</h4>
-            <p class="syrup-price">Rp 195.000 <span class="old-price">Rp 295.000</span></p>
-          </div>
-        </div>
-        <div class="syrup-card">
-          <div class="syrup-img">
-            <img src="https://shop.toffin.id/public/image/product.template/fo-syrup-hazelnut-with-sugar-hoz.jpg" alt="FO Syrup Hazelnut" loading="lazy">
-          </div>
-          <div class="syrup-info">
-            <span class="syrup-brand">FO</span>
-            <h4>Syrup Hazelnut (With Sugar)</h4>
-            <p class="syrup-price">Rp 115.000</p>
-          </div>
-        </div>
-        <div class="syrup-card">
-          <div class="syrup-img">
-            <img src="https://shop.toffin.id/public/image/product.template/fabbri-mixybar-amarena-lby.jpg" alt="Fabbri Mixybar Amarena" loading="lazy">
-          </div>
-          <div class="syrup-info">
-            <span class="syrup-brand">Fabbri</span>
-            <h4>Mixybar Amarena</h4>
-            <p class="syrup-price">Rp 335.000</p>
-          </div>
-        </div>
-      </div>
-      <div class="products-cta">
-        <a href="https://shop.toffin.id/category/syrup/405" class="btn btn-primary btn-lg" target="_blank">Lihat Semua Syrup →</a>
+      <div class="section-cta" data-reveal>
+        <a href="https://shop.toffin.id/category/coffee-machine/383" class="btn btn-outline btn-lg" target="_blank">
+          <span>Lihat Semua Mesin</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
   </section>
 
-  <section id="gallery" class="gallery-section">
+  <section class="ingredients-section" id="ingredients">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Galeri</span>
-        <h2 class="section-title">Toffin dalam Aksi</h2>
-        <p class="section-subtitle">Lihat bagaimana Toffin mendukung operasional kafe dan restoran di seluruh Indonesia.</p>
+      <div class="section-header" data-reveal>
+        <span class="section-label">Bahan Baku</span>
+        <h2 class="section-title-lg">Syrup & Bahan<br><em>Minuman Premium</em></h2>
       </div>
-      <div class="gallery-grid">
-        <div class="gallery-item gallery-large">
-          <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&q=80&auto=format&fit=crop" alt="Barista making coffee" loading="lazy">
-          <div class="gallery-caption">
-            <h4>Barista Training</h4>
-            <p>Pelatihan barista profesional untuk standar kopi terbaik</p>
+      <div class="ingredients-scroll">
+        <div class="ingredients-track">
+          <div class="ingredient-card" data-reveal>
+            <div class="ingredient-img"><img src="/public/images/products/syrup-peach.png" alt="DaVinci Peach" loading="lazy"></div>
+            <div class="ingredient-info"><span class="ingredient-brand">DaVinci</span><h4>Peach Garden 750ML</h4><span class="ingredient-price">Rp 119.000</span></div>
+          </div>
+          <div class="ingredient-card" data-reveal>
+            <div class="ingredient-img"><img src="/public/images/products/syrup-mango.png" alt="DaVinci Mango" loading="lazy"></div>
+            <div class="ingredient-info"><span class="ingredient-brand">DaVinci</span><h4>Majestic Mango 750ML</h4><span class="ingredient-price">Rp 119.000</span></div>
+          </div>
+          <div class="ingredient-card" data-reveal>
+            <div class="ingredient-img"><img src="/public/images/products/syrup-kiwi.jpg" alt="Fabbri Kiwi" loading="lazy"></div>
+            <div class="ingredient-info"><span class="ingredient-brand">Fabbri</span><h4>Mixybar Kiwi</h4><span class="ingredient-price">Rp 295.000</span></div>
+          </div>
+          <div class="ingredient-card" data-reveal>
+            <div class="ingredient-img"><img src="/public/images/products/syrup-vanilla.jpg" alt="TFN Vanilla" loading="lazy"></div>
+            <div class="ingredient-info"><span class="ingredient-brand">TFN</span><h4>Syrup Vanilla</h4><span class="ingredient-price">Rp 115.000</span></div>
+          </div>
+          <div class="ingredient-card" data-reveal>
+            <div class="ingredient-img"><img src="/public/images/products/syrup-cranberry.jpg" alt="Fabbri Cranberry" loading="lazy"></div>
+            <div class="ingredient-info"><span class="ingredient-brand">Fabbri</span><h4>Mixybar Cranberry</h4><span class="ingredient-price">Rp 335.000</span></div>
+          </div>
+          <div class="ingredient-card" data-reveal>
+            <div class="ingredient-img"><img src="/public/images/products/syrup-lemon.jpg" alt="Fabbri Lemon" loading="lazy"></div>
+            <div class="ingredient-info"><span class="ingredient-brand">Fabbri</span><h4>Mixybar Lemon</h4><span class="ingredient-price">Rp 195.000</span></div>
+          </div>
+          <div class="ingredient-card" data-reveal>
+            <div class="ingredient-img"><img src="/public/images/products/syrup-hazelnut.jpg" alt="FO Hazelnut" loading="lazy"></div>
+            <div class="ingredient-info"><span class="ingredient-brand">FO</span><h4>Syrup Hazelnut</h4><span class="ingredient-price">Rp 115.000</span></div>
+          </div>
+          <div class="ingredient-card" data-reveal>
+            <div class="ingredient-img"><img src="/public/images/products/syrup-amarena.jpg" alt="Fabbri Amarena" loading="lazy"></div>
+            <div class="ingredient-info"><span class="ingredient-brand">Fabbri</span><h4>Mixybar Amarena</h4><span class="ingredient-price">Rp 335.000</span></div>
           </div>
         </div>
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80&auto=format&fit=crop" alt="Cafe interior" loading="lazy">
-          <div class="gallery-caption">
-            <h4>Showroom Toffin</h4>
-            <p>Temukan mesin impian Anda di showroom kami</p>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&q=80&auto=format&fit=crop" alt="Coffee shop" loading="lazy">
-          <div class="gallery-caption">
-            <h4>Kafe Mitra</h4>
-            <p>15.000+ kafe mempercayai Toffin</p>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=600&q=80&auto=format&fit=crop" alt="Coffee beans" loading="lazy">
-          <div class="gallery-caption">
-            <h4>Kopi Specialty</h4>
-            <p>Biji kopi pilihan dari berbagai origin</p>
-          </div>
-        </div>
-        <div class="gallery-item gallery-wide">
-          <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800&q=80&auto=format&fit=crop" alt="Latte art" loading="lazy">
-          <div class="gallery-caption">
-            <h4>Latte Art</h4>
-            <p>Teknik latte art dari Toffin Flavour Engineer</p>
-          </div>
-        </div>
+      </div>
+      <div class="section-cta" data-reveal>
+        <a href="https://shop.toffin.id/category/syrup/405" class="btn btn-outline btn-lg" target="_blank">
+          <span>Lihat Semua Bahan Baku</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
   </section>
 
-  <section id="brands" class="brands-section">
+  <section class="brands-section">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Brand Partner</span>
-        <h2 class="section-title">Brand Dunia yang Kami Distribusikan</h2>
-        <p class="section-subtitle">Pengakuan sebagai distributor top-5 global untuk beberapa brand premium dunia.</p>
+      <div class="section-header" data-reveal>
+        <span class="section-label">Brand Partner</span>
+        <h2 class="section-title-lg">Dunia yang Kami<br><em>Distribusikan</em></h2>
       </div>
-      <div class="brands-grid">
+      <div class="brands-grid" data-reveal>
         <div class="brand-item">Victoria Arduino</div>
         <div class="brand-item">Nuova Simonelli</div>
         <div class="brand-item">Rocket Espresso</div>
-        <div class="brand-item">Smeg</div>
+        <div class="brand-item">SMEG</div>
         <div class="brand-item">Hario</div>
         <div class="brand-item">Eureka</div>
         <div class="brand-item">Eversys</div>
@@ -416,172 +376,98 @@
     </div>
   </section>
 
-  <section class="about-section">
+  <section class="operational-section">
     <div class="container">
-      <div class="about-grid">
-        <div class="about-content">
-          <span class="section-tag">Tentang Toffin</span>
-          <h2>Lebih dari Sekadar Distributor</h2>
-          <p>Sejak 2007, Toffin hadir bukan hanya sebagai penyedia mesin kopi — melainkan sebagai mitra bisnis jangka panjang bagi ribuan kafe, restoran, dan hotel di Indonesia.</p>
-          <p>Kami memahami bahwa setiap kafe memiliki cerita, visi, dan tantangannya sendiri. Dari konsultasi awal, rekomendasi mesin, hingga pelatihan barista dan dukungan purna jual — semuanya disesuaikan dengan kebutuhan spesifik bisnis Anda.</p>
-          <div class="about-stats">
-            <div class="about-stat">
-              <strong>800+</strong>
-              <span>Karyawan</span>
+      <div class="op-grid">
+        <div class="op-locations" data-reveal>
+          <span class="section-label">Operasi Global</span>
+          <h2 class="section-title">3 Negara, Satu Visi</h2>
+          <div class="op-list">
+            <div class="op-item active">
+              <h4>Indonesia</h4>
+              <p>Kantor pusat & operasi terbesar. 29 kota, full F&B solutions.</p>
             </div>
-            <div class="about-stat">
-              <strong>3</strong>
-              <span>Negara</span>
+            <div class="op-item">
+              <h4>Vietnam</h4>
+              <p>Ekspansi Asia Tenggara. Distribusi & platform digital.</p>
             </div>
-            <div class="about-stat">
-              <strong>1.000+</strong>
-              <span>SKU</span>
-            </div>
-            <div class="about-stat">
-              <strong>5</strong>
-              <span>Entitas Bisnis</span>
+            <div class="op-item">
+              <h4>Italia</h4>
+              <p>TFN Italia — pabrik mesin espresso di Milan.</p>
             </div>
           </div>
         </div>
-        <div class="about-visual">
-          <div class="about-card">
-            <div class="about-card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            </div>
-            <h4>Indonesia</h4>
-            <p>Kantor pusat & operasi terbesar. 29 kota, full F&B solutions.</p>
-          </div>
-          <div class="about-card">
-            <div class="about-card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            </div>
-            <h4>Vietnam</h4>
-            <p>Ekspansi Asia Tenggara. Distribusi & platform digital.</p>
-          </div>
-          <div class="about-card">
-            <div class="about-card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            </div>
-            <h4>Italia</h4>
-            <p>TFN Italia — pabrik mesin espresso di Milan. Officine Allegra & TERRA.</p>
+        <div class="op-visual" data-reveal>
+          <div class="op-image-stack">
+            <div class="op-img op-img-1"><img src="/public/images/gallery/barista.jpg" alt="Barista" loading="lazy"></div>
+            <div class="op-img op-img-2"><img src="/public/images/gallery/showroom.jpg" alt="Showroom" loading="lazy"></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="testimonials" class="testimonials-section">
+  <section class="clients-section">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Testimoni</span>
-        <h2 class="section-title">Apa Kata Mereka</h2>
-        <p class="section-subtitle">15.000+ bisnis telah merasakan manfaatnya.</p>
+      <div class="section-header" data-reveal>
+        <span class="section-label">Dipercaya Oleh</span>
+        <h2 class="section-title-lg"><em>15.000+</em> Bisnis<br>di Seluruh Indonesia</h2>
       </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p>"Toffin bukan sekadar supplier. Mereka benar-benar memahami kebutuhan bisnis kafe kami — dari pemilihan mesin yang tepat hingga respons servis yang selalu cepat dan profesional."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">AR</div>
-            <div>
-              <strong>Andi Rachman</strong>
-              <span>Owner · Kopi Nusantara, Jakarta</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p>"Sejak pakai Toffin App, pemesanan bahan baku yang dulu makan 1 jam sehari kini selesai dalam 5 menit. Stok terpantau, delivery tepat waktu, operasional jauh lebih smooth."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">SR</div>
-            <div>
-              <strong>Sari Rahayu</strong>
-              <span>F&B Manager · Hotel Bintang, Surabaya</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p>"Program barista training dari Toffin meningkatkan standar kopi kami secara signifikan. Tamu selalu minta rekomendasi kopi terbaik kami — dan itu berkat ilmu dari tim Toffin."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">BW</div>
-            <div>
-              <strong>Budi Wicaksono</strong>
-              <span>Founder · Artisan Coffee, Bandung</span>
-            </div>
-          </div>
-        </div>
+      <div class="clients-logos" data-reveal>
+        <div class="client-logo-item">Kafe Independen</div>
+        <div class="client-logo-item">Hotel Bintang 5</div>
+        <div class="client-logo-item">Restoran Chain</div>
+        <div class="client-logo-item">Franchise Internasional</div>
+        <div class="client-logo-item">Specialty Coffee</div>
+        <div class="client-logo-item">Bakery & Pastry</div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="contact-section">
+  <section class="cta-section" id="contact">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Hubungi Kami</span>
-        <h2 class="section-title">Siap Membawa Bisnis Kafe Anda ke Level Berikutnya?</h2>
-        <p class="section-subtitle">Konsultasi gratis dengan tim ahli Toffin — tanpa kewajiban, langsung dapat rekomendasi yang tepat.</p>
+      <div class="cta-content" data-reveal>
+        <span class="section-label">Hubungi Kami</span>
+        <h2 class="cta-title">Siap Membawa Bisnis<br>Kafe Anda ke Level<br><em>Berikutnya?</em></h2>
+        <p class="cta-sub">Konsultasi gratis dengan tim ahli Toffin — tanpa kewajiban, langsung dapat rekomendasi yang tepat.</p>
       </div>
-      <div class="contact-grid">
-        <div class="contact-card-main">
-          <div class="contact-avatar">RV</div>
-          <div class="contact-info">
+      <div class="cta-grid" data-reveal>
+        <div class="cta-contact-card">
+          <div class="cta-avatar">RV</div>
+          <div class="cta-contact-info">
             <h3>Rico Verdian</h3>
-            <span class="contact-role">Sales Marketing & Trainer</span>
-            <div class="contact-details">
-              <div class="contact-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span class="cta-role">Sales Marketing & Trainer</span>
+            <div class="cta-details">
+              <div class="cta-detail">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 <span>Pekanbaru, Riau</span>
               </div>
-              <div class="contact-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <div class="cta-detail">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 <a href="https://wa.me/6281320666967" target="_blank">+62 813-2066-6967</a>
               </div>
-              <div class="contact-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              <div class="cta-detail">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
                 <a href="https://www.instagram.com/rico.verdian4.20" target="_blank">@rico.verdian4.20</a>
               </div>
             </div>
-            <div class="contact-actions">
-              <a href="https://wa.me/6281320666967" class="btn btn-primary" target="_blank">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                Chat via WhatsApp
-              </a>
-              <a href="https://www.instagram.com/rico.verdian4.20" class="btn btn-outline" target="_blank">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                Instagram
-              </a>
-            </div>
           </div>
         </div>
-        <div class="contact-side">
-          <div class="contact-side-card">
-            <div class="side-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <div class="cta-actions-col">
+          <a href="https://wa.me/6281320666967" class="btn btn-primary btn-xl btn-full" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span>Chat via WhatsApp</span>
+          </a>
+          <a href="https://shop.toffin.id" class="btn btn-outline btn-xl btn-full" target="_blank">Kunjungi Toko Online</a>
+          <div class="cta-side-info">
+            <div class="cta-side-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Senin - Sabtu: 09.00 - 17.00</span>
             </div>
-            <h4>Telepon / WhatsApp</h4>
-            <a href="https://wa.me/6281320666967" target="_blank">+62 813-2066-6967</a>
-          </div>
-          <div class="contact-side-card">
-            <div class="side-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <div class="cta-side-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Pekanbaru, Riau</span>
             </div>
-            <h4>Instagram</h4>
-            <a href="https://www.instagram.com/rico.verdian4.20" target="_blank">@rico.verdian4.20</a>
-          </div>
-          <div class="contact-side-card">
-            <div class="side-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <h4>Lokasi</h4>
-            <span>Pekanbaru, Riau</span>
-          </div>
-          <div class="contact-side-card">
-            <div class="side-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <h4>Jam Operasional</h4>
-            <span>Senin - Sabtu: 09.00 - 17.00</span>
           </div>
         </div>
       </div>
@@ -590,11 +476,11 @@
 
   <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
+      <div class="footer-top">
         <div class="footer-brand">
-          <a href="#" class="logo"><img src="https://www.toffin.id/assets/img/root/logo-white.png" alt="Toffin Indonesia" class="logo-img"></a>
-          <p>Mitra bisnis HORECA terpercaya sejak 2007. Melayani 15.000+ kafe, restoran & hotel di 19 kota Indonesia.</p>
-          <div class="social-links">
+          <img src="/public/images/logos/toffin-white.png" alt="Toffin" class="footer-logo">
+          <p>Mitra bisnis HORECA terpercaya sejak 2007.</p>
+          <div class="footer-social">
             <a href="https://www.instagram.com/toffin.id" target="_blank" aria-label="Instagram">IG</a>
             <a href="https://www.tiktok.com/@toffin.id" target="_blank" aria-label="TikTok">TT</a>
             <a href="https://www.youtube.com/@toffinindonesiaofficial" target="_blank" aria-label="YouTube">YT</a>
@@ -603,29 +489,23 @@
         </div>
         <div class="footer-links">
           <h4>Perusahaan</h4>
-          <ul>
-            <li><a href="https://toffin.id/about" target="_blank">Tentang Toffin</a></li>
-            <li><a href="https://toffin.id/support" target="_blank">Support</a></li>
-            <li><a href="https://toffin.id/toffin-app" target="_blank">Toffin App</a></li>
-            <li><a href="https://insight.toffin.id" target="_blank">Blog & Insight</a></li>
-          </ul>
+          <a href="https://toffin.id/about" target="_blank">Tentang Toffin</a>
+          <a href="https://toffin.id/support" target="_blank">Support</a>
+          <a href="https://toffin.id/toffin-app" target="_blank">Toffin App</a>
+          <a href="https://insight.toffin.id" target="_blank">Blog</a>
         </div>
         <div class="footer-links">
-          <h4>Produk & Layanan</h4>
-          <ul>
-            <li><a href="https://shop.toffin.id/category/coffee-machine/383" target="_blank">Mesin Espresso</a></li>
-            <li><a href="https://shop.toffin.id/category/coffee-grinder/385" target="_blank">Coffee Grinder</a></li>
-            <li><a href="https://shop.toffin.id/category/ingredients/384" target="_blank">Bahan Baku</a></li>
-            <li><a href="https://toffin.id/support" target="_blank">Layanan Purna Jual</a></li>
-          </ul>
+          <h4>Produk</h4>
+          <a href="https://shop.toffin.id/category/coffee-machine/383" target="_blank">Mesin Espresso</a>
+          <a href="https://shop.toffin.id/category/coffee-grinder/385" target="_blank">Coffee Grinder</a>
+          <a href="https://shop.toffin.id/category/ingredients/384" target="_blank">Bahan Baku</a>
+          <a href="https://toffin.id/support" target="_blank">Purna Jual</a>
         </div>
         <div class="footer-links">
-          <h4>Hubungi Kami</h4>
-          <ul>
-            <li>Pekanbaru, Riau</li>
-            <li><a href="https://wa.me/6281320666967">+62 813-2066-6967</a></li>
-            <li><a href="https://www.instagram.com/rico.verdian4.20" target="_blank">@rico.verdian4.20</a></li>
-          </ul>
+          <h4>Kontak</h4>
+          <a href="https://wa.me/6281320666967" target="_blank">+62 813-2066-6967</a>
+          <a href="https://www.instagram.com/rico.verdian4.20" target="_blank">@rico.verdian4.20</a>
+          <span>Pekanbaru, Riau</span>
         </div>
       </div>
       <div class="footer-bottom">
