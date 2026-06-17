@@ -145,4 +145,14 @@ document.addEventListener('DOMContentLoaded',()=>{
       marquee.style.animationDuration=speed+'s';
     });
   }
+
+  // FAQ Toggle
+  document.querySelectorAll('.faq-toggle').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const item=btn.closest('.faq-item');
+      const isActive=item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('active'));
+      if(!isActive)item.classList.add('active');
+    });
+  });
 });

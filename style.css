@@ -183,6 +183,18 @@ body:hover .cursor-follower.hover{width:60px;height:60px;border-color:var(--prim
 .client-logo-item{font-size:0.9375rem;font-weight:600;color:var(--text-dim);padding:20px 32px;border:1px solid var(--border-subtle);border-radius:var(--radius-sm);transition:all 0.3s}
 .client-logo-item:hover{color:var(--text);border-color:var(--border);background:var(--bg-elevated)}
 
+/* FAQ */
+.faq-section{padding:clamp(80px,12vw,160px) 0}
+.faq-grid{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:border-color 0.3s}
+.faq-item:hover{border-color:var(--border-subtle)}
+.faq-toggle{width:100%;padding:24px 28px;background:none;border:none;display:flex;align-items:center;justify-content:space-between;cursor:pointer;color:var(--text);font-size:1rem;font-weight:600;text-align:left;font-family:inherit;gap:16px}
+.faq-toggle svg{flex-shrink:0;color:var(--text-muted);transition:transform 0.3s var(--ease),color 0.3s}
+.faq-item.active .faq-toggle svg{transform:rotate(45deg);color:var(--primary)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height 0.4s var(--ease),padding 0.4s var(--ease)}
+.faq-item.active .faq-answer{max-height:200px}
+.faq-answer p{padding:0 28px 24px;color:var(--text-muted);line-height:1.7;font-size:0.9375rem}
+
 /* CTA */
 .cta-section{padding:clamp(80px,12vw,160px) 0}
 .cta-content{text-align:center;margin-bottom:64px}
