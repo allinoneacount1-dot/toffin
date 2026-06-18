@@ -91,6 +91,18 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
 </head>
 <body>
+  <!-- Page Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">TOFFIN</div>
+      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+      <span class="loader-text">Loading experience...</span>
+    </div>
+  </div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
   <div class="cursor"></div>
   <div class="cursor-follower"></div>
 
@@ -562,7 +574,9 @@
       </div>
       <div class="cta-grid" data-reveal>
         <div class="cta-contact-card">
-          <div class="cta-avatar">RV</div>
+          <div class="cta-avatar">
+            <img src="/images/team/rico-verdian.jpg" alt="Rico Verdian" class="cta-avatar-img">
+          </div>
           <div class="cta-contact-info">
             <h3>Rico Verdian</h3>
             <span class="cta-role">Sales Marketing & Trainer</span>

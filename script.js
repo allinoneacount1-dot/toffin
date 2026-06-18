@@ -1,4 +1,30 @@
 document.addEventListener('DOMContentLoaded',()=>{
+  // Loader
+  const loader=document.getElementById('loader');
+  const loaderFill=document.querySelector('.loader-bar-fill');
+  if(loader&&loaderFill){
+    let progress=0;
+    const interval=setInterval(()=>{
+      progress+=Math.random()*15+5;
+      if(progress>100)progress=100;
+      loaderFill.style.width=progress+'%';
+      if(progress>=100){
+        clearInterval(interval);
+        setTimeout(()=>loader.classList.add('hidden'),400);
+      }
+    },100);
+  }
+
+  // Scroll Progress
+  const scrollProgress=document.getElementById('scrollProgress');
+  if(scrollProgress){
+    window.addEventListener('scroll',()=>{
+      const h=document.documentElement;
+      const pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
+      scrollProgress.style.width=pct+'%';
+    });
+  }
+
   // GSAP Setup
   if(typeof gsap==='undefined')return;
   gsap.registerPlugin(ScrollTrigger);
